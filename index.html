@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Funcionários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciamento de Funcionários</h1>
+        
+        <form id="employee-form">
+            <input type="text" id="employee-name" placeholder="Nome do Funcionário" required>
+            <select id="employee-role" required>
+                <option value="">Selecione um Cargo</option>
+                <option value="Gerente">Gerente</option>
+                <option value="Desenvolvedor">Desenvolvedor</option>
+                <option value="Designer">Designer</option>
+                <option value="Analista">Analista</option>
+                <option value="Testador">Testador</option>
+                <option value="Administrativo">Administrativo</option>
+                <option value="Coordenador">Coordenador</option>
+                <option value="Supervisor">Supervisor</option>
+                <option value="Assistente">Assistente</option>
+                <option value="Consultor">Consultor</option>
+                <option value="Estagiário">Estagiário</option>
+                <option value="Recepcionista">Recepcionista</option>
+                <option value="Secretário">Secretário</option>
+                <option value="Gerente de Projetos">Gerente de Projetos</option>
+                <option value="Engenheiro de Software">Engenheiro de Software</option>
+                <option value="Especialista em Marketing">Especialista em Marketing</option>
+                <option value="Analista de Dados">Analista de Dados</option>
+            </select>
+            <input type="date" id="employee-hire-date" required>
+            <button type="submit">Adicionar Funcionário</button>
+        </form>
+
+        <input type="text" id="search-input" placeholder="Buscar por nome" onkeyup="searchEmployees()">
+        <select id="filter-role" onchange="filterEmployees()">
+            <option value="">Filtrar por Cargo</option>
+            <option value="Gerente">Gerente</option>
+            <option value="Desenvolvedor">Desenvolvedor</option>
+            <option value="Designer">Designer</option>
+            <option value="Analista">Analista</option>
+            <option value="Testador">Testador</option>
+            <option value="Administrativo">Administrativo</option>
+            <option value="Coordenador">Coordenador</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Assistente">Assistente</option>
+            <option value="Consultor">Consultor</option>
+            <option value="Estagiário">Estagiário</option>
+            <option value="Recepcionista">Recepcionista</option>
+            <option value="Secretário">Secretário</option>
+            <option value="Gerente de Projetos">Gerente de Projetos</option>
+            <option value="Engenheiro de Software">Engenheiro de Software</option>
+            <option value="Especialista em Marketing">Especialista em Marketing</option>
+            <option value="Analista de Dados">Analista de Dados</option>
+        </select>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Data de Contratação</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="employees"></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
